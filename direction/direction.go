@@ -9,6 +9,20 @@ const (
 	Left
 )
 
+func (direction Direction) String() string {
+	switch direction {
+	case Right:
+		return "R"
+	case Left:
+		return "L"
+	case Up:
+		return "U"
+	case Down:
+		return "D"
+	}
+	panic("switch not exhaustive")
+}
+
 func FromCapitalLetter(r rune) Direction {
 	switch r {
 	case 'R':
